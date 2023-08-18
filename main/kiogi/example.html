@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>연히가 구상할 웹페이지</title>
+</head>
+<body>
+    <div style="text-align: center;">
+        <h1>이 페이지는 연히가 잘 할꺼야 !!</h1>
+    </div>
+    <div class="boxes">
+        <div class="box" onclick="openNewTraffic()">교통수단</div>
+        <div class="box" onclick="openNewWindow()">음식점</div>
+        <div class="box" onclick="openNewCenter()">무인발급기</div>
+        <div class="box" id=kiogi onclick="openNewWindow()">키오기와<br> 대화해요</div>
+    </div>
+</body>
+
+<style>
+    .boxes {
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+        margin: 0 auto;
+        height: 300px;
+        cursor: pointer;
+        font-size: xxx-large;
+    }
+
+    .box {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid black;
+        margin: 10px; /* Add margin for spacing between the boxes */
+    }
+
+</style>
+
+<script>
+    function openNewTraffic() {
+        window.open("traffic.html", "_blank", "width=440,height=820");
+    }
+    function openNewCenter() {
+        window.open("center.html", "_blank", "width=440,height=820");
+    }
+</script>
+
+</html>

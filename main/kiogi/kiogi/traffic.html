@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>교통수단</title>
+</head>
+<body>
+    <div class="category">
+        <div class="TAXI" onclick="openTAXI()">
+            <div class="image" style="background-image: url(./kakaot.png)"></div>
+            <div class="text">택시
+                <div class="subtext">(카카오T)</div>
+            </div>
+        </div>
+        <div class="BUS" onclick="openBUS()">
+            <div class="image" style="background-image: url('./tmoney.png');"></div>
+            <div class="text">버스
+                <div class="subtext">(티머니고)</div>
+            </div>
+        </div>
+        <div class="KTX" onclick="openKTX()">
+            <div class="image" style="background-image: url('./korail.png');"></div>
+            <div class="text">KTX
+                <div class="subtext">(코레일톡)</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<style>
+    @font-face {
+    font-family: 'NanumSquareNeo-Variable';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+    :root {
+        --viewport-height: 100vh; /* Set the viewport height variable */
+    }
+
+    /* Set the height of elements based on the viewport height */
+    .category {
+        display: flex;
+        flex-direction: column;
+        margin-left: -10px;
+        margin-right: -8px;
+        height: calc(var(--viewport-height) * 0.26); /* Set the height as 26% of the viewport height */
+    }
+
+    .BUS, .KTX, .TAXI {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: calc(var(--viewport-height) * 0.3); /* Set the height as 20% of the viewport height */
+        background-color: rgba(211, 211, 211, 0.6); /* 투명한 회색 배경색 */
+        margin-top: calc(var(--viewport-height) * 0.02); /* Set the top margin as 2% of the viewport height */
+        cursor: pointer;
+        font-family: 'NanumSquareNeo-Variable';
+    }
+
+    .image {
+        width: 50%; /* 이미지의 너비를 조정하세요 */
+        height: 100%; /* 이미지의 높이를 조정하세요 */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .TAXI{
+        margin-top: 1.5vh;
+    }
+
+    .text {
+        margin-left: 9%;
+        font-weight: 600;
+        font-size: 32px;
+        text-align: center;
+    }
+</style>
+
+<script>
+    function openTAXI() {
+        window.location.href = "taxi.html";
+    }
+    function openBUS() {
+        window.location.href = "bus.html";
+    }
+    function openKTX() {
+        window.location.href = "ktx.html";
+    }
+</script>
+
+</html>

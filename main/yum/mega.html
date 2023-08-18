@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="mega_menu.css">
+    <title>키오기 키오스크</title>
+</head>
+
+<body>
+    <script src="main.js"></script>
+
+    <div class="kiosk_simulation">
+
+        <div class="kiosk_mega_backdround">
+
+            <div class="kiosc_mega_screen">
+
+
+                <div id="mega_start_img">
+                    <button id="mega_start_btn" onclick="start_btn()"></button>
+                </div>
+
+
+                <div id="mega_order">
+                    <div id="top_bar">
+
+                        <div id="mega_top_bar_name">키오기로 키오스크</div>
+                     
+                    </div>
+
+                    <div id="mega_menu_bar">
+                        <div class="mega_menu_1" title="한식" onclick="open_menu_table(this.title)">한식</div>
+                        <div class="mega_menu_1" title="양식" onclick="open_menu_table(this.title)">양식</div>
+                        <div class="mega_menu_1" title="중식" onclick="open_menu_table(this.title)">중식</div>
+                        <div class="mega_menu_1"  title="일식" onclick="open_menu_table(this.title)">일식</div>
+                    
+
+
+                        <!-- <div class="mega_menu_3" title="아이스크림" onclick="open_menu_table(this.title)">아이스크림</div>  -->
+                        <!--<div class="mega_menu_3" title="병음료" onclick="open_menu_table(this.title)">병음료</div>
+
+                        <div class="mega_menu_4" title="MD상품" onclick="open_menu_table(this.title)">MD상품</div>
+                        <div class="mega_menu_4" title="세트상품" onclick="open_menu_table(this.title)">세트상품</div>
+                        <div class="mega_menu_4"></div>
+                        <div class="mega_menu_4"></div> -->
+
+                    </div>
+                </div>
+
+
+                <div id="mega_menu_table">
+                    
+
+        
+                    <div id="한식">
+                        <div id="row">
+                            <div id="돌솥비빔밥" title="coffee" data-price="9000"
+                                onclick="option(this.id, this.title, this.dataset.price)"></div>
+                            <div id="김치볶음밥" title="coffee" data-price="6500"
+                                onclick="option(this.id, this.title, this.dataset.price)"></div>
+                            <div id="된장찌개" title="coffee" data-price="8000"
+                                onclick="option(this.id, this.title, this.dataset.price)"></div>
+                            <div id="라면" title="coffee" data-price="5500"
+                                onclick="option(this.id, this.title, this.dataset.price)"></div>
+                        </div>
+                        <div id="row">
+                            <div id="삼계탕" title="coffee" data-price="12000"
+                                onclick="option(this.id, this.title, this.dataset.price)"></div>
+                        </div>
+    
+                    </div>
+
+                    <div id="양식">
+                        <div id="row">
+                            <div id="스파게티" title="coffee" data-price="7500"
+                                onclick="option(this.id, this.title, this.dataset.price)"></div>
+                            <div id="함박스테이크" title="coffee" data-price="10000"
+                                onclick="option(this.id, this.title, this.dataset.price)"></div>
+                            <div id="햄버거" title="coffee" data-price="6000"
+                                onclick="option(this.id, this.title, this.dataset.price)"></div>
+                            <div id="부리또" title="coffee" data-price="8000"
+                                onclick="option(this.id, this.title, this.dataset.price)"></div>
+                        </div>
+                    </div>
+
+                    <div id="중식">
+                        <div id="row">
+                            <div id="군만두" title="no_option" data-price="3000"
+                                onclick="option(this.id, this.title, this.dataset.price)"></div>
+                            <div id="중화볶음밥" title="no_option" data-price="6500"
+                                onclick="option(this.id, this.title, this.dataset.price)"></div>
+                            <div id="짬뽕" title="no_option" data-price="8000"
+                                onclick="option(this.id, this.title, this.dataset.price)"></div>
+                            <div id="짜장면" title="no_option" data-price="8000"
+                                onclick="option(this.id, this.title, this.dataset.price)"></div>
+                        </div>
+                    </div>
+
+                    <div id="일식">
+                        <div id="row">
+                            <div id="우동" title="no_option" data-price="7000"
+                                onclick="option(this.id, this.title, this.dataset.price)"></div>
+                            <div id="초밥" title="no_option" data-price="10000"
+                                onclick="option(this.id, this.title, this.dataset.price)"></div>
+                            <div id="돈까스" title="no_option" data-price="10000"
+                                onclick="option(this.id, this.title, this.dataset.price)"></div>
+                            <div id="타꼬야끼" title="no_option" data-price="4000"
+                                onclick="option(this.id, this.title, this.dataset.price)"></div>
+                        </div>
+                    </div>
+                    
+                  
+                </div>
+
+
+                <div id="nextpage">
+                    <div id="first_page"></div>
+                    <div id="second_page"></div>
+                </div>
+
+
+                <div id="pay">
+                    <div id="order_lsit">
+                        <div id="order_1" class="cart">
+                            <div id="delete_1">X</div>
+                            <div id="range_1"></div>
+                            <div id="minus_1">ㅡ</div>
+                            <div id="amount_1"></div>
+                            <div id="plus_1">╋</div>
+                            <div id="item_price_1"></div>
+                        </div>
+                        <div id="order_2" class="cart">
+                            <div id="delete_2">X</div>
+                            <div id="range_2"></div>
+                            <div id="minus_2">ㅡ</div>
+                            <div id="amount_2"></div>
+                            <div id="plus_2">╋</div>
+                            <div id="item_price_2"></div>
+                        </div>
+                        <div id="order_3" class="cart">
+                            <div id="delete_3">X</div>
+                            <div id="range_3"></div>
+                            <div id="minus_3">ㅡ</div>
+                            <div id="amount_3"></div>
+                            <div id="plus_3">╋</div>
+                            <div id="item_price_3"></div>
+                        </div>
+                        <div id="order_4" class="cart">
+                            <div id="delete_4">X</div>
+                            <div id="range_4"></div>
+                            <div id="minus_4">ㅡ</div>
+                            <div id="amount_4"></div>
+                            <div id="plus_4">╋</div>
+                            <div id="item_price_4"></div>
+                        </div>
+                        <div id="order_5" class="cart">
+                            <div id="delete_5">X</div>
+                            <div id="range_5"></div>
+                            <div id="minus_5">ㅡ</div>
+                            <div id="amount_5"></div>
+                            <div id="plus_5">╋</div>
+                            <div id="item_price_5"></div>
+                        </div>
+                        <div id="order_6" class="cart">
+                            <div id="delete_6">X</div>
+                            <div id="range_6"></div>
+                            <div id="minus_6">ㅡ</div>
+                            <div id="amount_6"></div>
+                            <div id="plus_6">╋</div>
+                            <div id="item_price_6"></div>
+                        </div>
+                        <div id="order_7" class="cart">
+                            <div id="delete_7">X</div>
+                            <div id="range_7"></div>
+                            <div id="minus_7">ㅡ</div>
+                            <div id="amount_7"></div>
+                            <div id="plus_7">╋</div>
+                            <div id="item_price_7"></div>
+                        </div>
+
+                    </div>
+
+                    <div id="order_list_right">
+                        <div id="pay_right">
+                        </div>
+                        <div id="item_number"><br>선택한 상품 </div>
+                        <div id="pay_btn">
+                            <div id="total_price" onclick="open_window_pay()">0원<br>결제하기</div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div id="screen_bottom">
+
+                    <div id="insert_card">
+                        <div>카드를 넣어주세요</div>
+                        <div id="insert_card_block"></div>
+                        <div id="use_card_block">_______________________________</div>
+                        <div>카드를 긁어주세요</div>
+                        <div id="receipt">
+                            <div id="receipt_exit"></div>
+                            <div id="receipt_img"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="insert_card_moving" onclick="결제완료()"></div>
+
+                <div id="screen_to_window_pay"></div>
+
+                <div id="window_pay">
+                    <div id="window_top">
+                        <div>주문 세부내역을 다시 한번 확인하여 주세요</div>
+                        <div onclick="close_window_pay()">X</div>
+                    </div>
+                    <div id="window_order_list">
+                        <div id="window_1">
+                            <div id="w_order_1"></div>
+                            <div id="w_number_1"></div>
+                        </div>
+                        <div id="window_2">
+                            <div id="w_order_2"></div>
+                            <div id="w_number_2"></div>
+                        </div>
+                        <div id="window_3">
+                            <div id="w_order_3"></div>
+                            <div id="w_number_3"></div>
+                        </div>
+                        <div id="window_4">
+                            <div id="w_order_4"></div>
+                            <div id="w_number_4"></div>
+                        </div>
+                        <div id="window_5">
+                            <div id="w_order_5"></div>
+                            <div id="w_number_5"></div>
+                        </div>
+                        <div id="window_6">
+                            <div id="w_order_6"></div>
+                            <div id="w_number_6"></div>
+                        </div>
+                        <div id="window_7">
+                            <div id="w_order_7"></div>
+                            <div id="w_number_7"></div>
+                        </div>
+
+                    </div>
+                    <div id="window_num_price">
+                        <div id="window_num">
+                            <div>총 수량 &nbsp;</div>
+                            <div id="w_total_number" class="ex_css"></div>
+                            <div>개</div>
+                        </div>
+                        <div id="window_price">
+                            <div>총 결제금액 &nbsp;</div>
+                            <div id="w_total_price" class="ex_css">sd</div>
+                            <div>원</div>
+                        </div>
+                    </div>
+                    <div id="window_bottom">
+                        <div id="돌아가기" onclick="close_window_pay()"><br>돌아가기</div>
+                        
+                        <div id="결제하기" onclick="change_window_btn()"><br>결제하기</div>
+
+                       
+
+                    </div>
+
+                </div>
+
+            
+
+                <div id="w_카드결제">
+                    <div id="w_카드결제_top">
+                        <div>카드 결제</div>
+                        <div onclick="close_w_카드결제()">X</div>
+                    </div>
+                    <div id="w_block">
+                        <div>다음 그림과 같이 신용/체크카드를 넣어주세요</div>
+                        <div id="insert_card_w"></div>
+                    </div>
+                    <div id="w_list">
+                        <div id="w_list_1">
+                            <div>총 결제금액</div>
+                            <div id="w_카드결제_total_price">sd</div>
+                        </div>
+                        <div>
+                            <div>할부개월</div>
+                            <div >일시불</div>
+                        </div>
+                        <div id="w_list_1">
+                            <div>카드번호</div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div id="w_bottom">
+                        <div id="취소" onclick="close_w_카드결제()">취소</div>
+                        <div id="승인요청"> 승인요청</div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>

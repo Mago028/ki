@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>무인발급기</title>
+    <style>
+        @font-face {
+            font-family: 'NanumSquareNeo-Variable';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body{
+            background-image: url(./base.png);
+        }
+
+        
+        .category {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .box {
+            flex: 1;
+            border: 2px solid #000;
+            border-radius: 20px;
+            padding: 10px;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 15%;
+            width: 80%;
+            background-color: rgba(255, 255, 255, 0.7);            
+        }
+
+
+        .box .image-box {
+            width: 50%;
+            height: 150px;
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 10px;
+        }
+        .box .text {
+            text-align: center;
+            font-family: 'NanumSquareNeo-Variable', sans-serif;
+            font-size: 30px;
+        }
+        .box .subtext {
+            font-size: 20px;
+            color: gray;
+        }
+
+        #personalbox{
+            margin-top: 0%;
+        }
+
+        .category p{
+            margin-top: -2%;
+            font-family: 'NanumSquareNeo-Variable';
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .exampletitle p{
+            font-size: 30px;
+            font-weight: bold;
+            font-family: 'NanumSquareNeo-Variable';
+            text-align: center;
+            width: 90%;
+            height: 5vh;
+            background-color: rgb(190, 188, 188);
+            margin: 10% auto;
+            border-radius: 15px;
+            padding-top: 1%;
+            border: 2px solid ;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="exampletitle">
+        <p>증명 종류별 메뉴</p>
+    </div>
+    <div class="category">
+        <div class="box" id="personalbox" onclick="openPERSONAL()">
+            <div class="image-box"  style="background-image: url('./personal.png');"></div>
+            <div class="text">주민등록
+                <div class="subtext">(주민등록표 초본/등본)</div>
+            </div>
+        </div>
+        <div class="box" onclick="openFAMILY()">
+            <div class="image-box" style="background-image: url('./family.png');"></div>
+            <div class="text">가족관계등록부<br>
+                <div class="subtext">(가족관계증명서)</div>
+            </div>
+        </div>
+        <p>* 발급을 원하는 증명서를 선택해 주세요.</p>
+    </div>
+    <script>
+        function openPERSONAL() {
+            window.location.href = "personal.html";
+        }
+        function openFAMILY() {
+            window.location.href = "family.html";
+        }
+    </script>
+</body>
+</html>

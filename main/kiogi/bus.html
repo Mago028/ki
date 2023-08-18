@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KTX</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <!-- jQuery 라이브러리를 로드합니다. -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <!-- traffic.js 파일을 로드합니다. -->
+    <script src="traffic.js"></script>
+    <script src="bus.js"></script>
+    <style>
+        /* .three-lines-menu 클래스에 대한 스타일을 정의합니다. */
+        .three-lines-menu {
+            color: black;
+        }
+        #overlay { /*taxi 첫화면 빨간박스 크기,위치 조정 */
+        width: 68%;
+        height: 11%;
+        top: 40%; /* 원하는 위치로 설정 */
+        left: 3%; /* 원하는 위치로 설정 */
+        }
+    </style>
+</head>
+<body>
+    <p class="mention"><span>빨간색</span> 상자를 클릭하세요 !</p>
+    <div class="smart">
+        <div id="schermo">
+            <!-- 이미지를 덮어 씌울 상자 -->
+            <div id="overlay"></div>
+            <div class="frame-posizione">
+                <div id="header">
+                    <div class="wrap">
+                        <div id="menu" class="menu-responsive">
+                            <ul>
+                                <li><a href="#" id="returnButton">이전으로 돌아가기</a></li>
+                                <li><a href="#" id="restartButton">처음부터 다시하기</a></li>
+                                <li><a href="#" id="exitButton">종료하기</a></li>
+                            </ul>    
+                            <div class="three-lines-menu">&#9776;</div>
+                        </div><!-- fine schermo -->
+                    </div><!-- fine frame-posizione -->
+                </div><!-- fine header -->
+            </div><!-- fine wrap-->
+        </div><!-- fine menu-responsive menu-->
+    </div>
+</body>
+<script>
+    // 현재 이미지의 인덱스를 나타내는 변수
+    var currentImageIndex = 1;
+
+    // 이전 이미지의 인덱스를 기억하는 변수
+    var previousImageIndex = 1;
+
+    // 이미지 변경 함수
+    function changeImage() {
+        previousImageIndex = currentImageIndex;
+        currentImageIndex = (currentImageIndex % totalImages) + 1;
+        var imageUrl = './bus_img/' + currentImageIndex + '.jpg';
+        document.getElementById('schermo').style.backgroundImage = 'url(' + imageUrl + ')';
+        adjustOverlayPosition();
+    }
+
+    // 이전 이미지로 돌아가는 함수
+    function goToPreviousImage() {
+        currentImageIndex = previousImageIndex;
+        var imageUrl = './bus_img/' + currentImageIndex + '.jpg';
+        document.getElementById('schermo').style.backgroundImage = 'url(' + imageUrl + ')';
+        adjustOverlayPosition();
+    }
+
+    $(document).ready(function() {
+        // 새창열기 버튼 클릭 시 이벤트 처리
+        $('.three-lines-menu').on('click', function() {	
+            $('#menu ul').toggleClass('menu-responsive');
+        });
+
+        // 처음부터 다시하기 버튼 클릭 시 이벤트 처리
+        document.getElementById('restartButton').addEventListener('click', function() {
+            // but.html로 이동
+            window.location.href = 'bus.html';
+        });
+
+        // 종료하기 버튼 클릭 시 이벤트 처리
+        document.getElementById('exitButton').addEventListener('click', function() {
+            // 현재 창 닫기
+            window.close();
+        });
+
+        // overlay를 클릭하면 이미지 변경
+        document.getElementById('overlay').addEventListener('click', function() {
+            changeImage();
+        });
+
+        // 이전으로 돌아가기 버튼 클릭 시 이벤트 처리
+        document.getElementById('returnButton').addEventListener('click', function() {
+            goToPreviousImage();
+        });
+
+        // 초기에 첫 번째 이미지로 설정
+        var imageUrl = './bus_img/1.jpg';
+        document.getElementById('schermo').style.backgroundImage = 'url(' + imageUrl + ')';
+        });
+</script>
+</html>

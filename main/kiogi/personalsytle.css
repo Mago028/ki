@@ -1,0 +1,476 @@
+@font-face {
+    font-family: 'NanumSquareNeo-Variable';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: black;
+    font-family: 'NanumSquareNeo-Variable', sans-serif;
+}
+
+#maintext {
+    color: orange;
+    margin-bottom: 2%;
+}
+
+.text {
+    color: white;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 100%;
+}
+
+#subtext {
+    white-space: nowrap;
+}
+
+.personal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.main {
+    width: 85%;
+    height: 78vh;
+    border: 2px solid white;
+    margin-top: 20%;
+    border-radius: 15px;
+}
+
+.box1, .box2 {
+    width: 90%;
+    height: 15vh;
+    border-radius: 10px;
+    margin: 10px;
+    background-color: lightgrey;
+    font-size: 25px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6%;
+    margin-left: 5%;
+}
+
+.box2{
+    margin-top: 8%;
+}
+
+.box p{
+    color: white;
+    margin-left: 5%;
+    font-size: 25px;
+    display: inline; /* 추가된 부분 */
+    margin-right: 10px; /* 추가된 부분 */
+}
+.box img{
+    width: 7%;
+    background-color: white;
+    vertical-align: middle; /* 이미지 수직 중앙 정렬 */
+    margin-right: 3%;
+}
+
+.box{
+    margin-top: 8%;
+}
+
+.container{
+    margin-top: 5%;
+    text-align: center;
+}
+
+.container p{
+    color: white;
+    font-size: 16px;
+}
+
+.green {
+    color: green; /* 텍스트 색을 초록색으로 변경 */
+}
+
+.rectangle {
+    width: 90%; /* 사각형의 너비 */
+    height: 5vh; /* 사각형의 높이 */
+    background-color: black; /* 사각형의 배경색 */
+    border: 2px solid white;
+    border-radius: 20px;
+    margin-top: 8%;
+    margin-left: 5%;
+    margin-bottom: 7%;
+}
+
+.rectangle p{
+    color: orange;
+    font-weight: 30px;
+}
+
+#keypad{
+    width: 90%;
+    height: 35%;
+    margin-top: -2%;
+}
+
+#button{
+    text-align: right; /* 오른쪽 정렬 */
+    margin-left: 65%;
+    margin-top: 3%;
+    width: 25%;
+    height: 4.5vh;
+    text-align: center;
+    background-color: red;
+    border: none;
+    color: white;
+    font-family: 'NanumSquareNeo-Variable';
+    font-size: 20px;
+    font-weight: 80px;
+    cursor: pointer;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    margin-top: -150%;
+    width: 100%; /* 가로 폭을 꽉 채우도록 설정 */
+    height: 100vh; /* 세로 높이를 화면 높이와 같도록 설정 */
+}
+
+#finger {
+    width: 90%;
+    height: 40%;
+}
+
+#button2{
+    text-align: right; /* 오른쪽 정렬 */
+    margin-left: 65%;
+    margin-top: 156%;
+    width: 25%;
+    height: 4.5vh;
+    text-align: center;
+    background-color: red;
+    border: none;
+    color: white;
+    font-family: 'NanumSquareNeo-Variable';
+    font-size: 20px;
+    font-weight: 80px;
+    cursor: pointer;
+} /*끝*/
+
+#select{
+    margin-top: -71vh;
+    margin-left: 5%;
+    color: lightgray;
+}
+
+#name span{
+    color: orange;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#relation span{
+    color: white;
+    font-weight: bold;
+
+}
+
+#person span{
+    color: white;
+    font-weight: bold;
+
+}
+
+#button3{
+    text-align: right; /* 오른쪽 정렬 */
+    margin-left: 65%;
+    margin-top: 151%;
+    width: 25%;
+    height: 4.5vh;
+    text-align: center;
+    background-color: red;
+    border: none;
+    color: white;
+    font-family: 'NanumSquareNeo-Variable';
+    font-size: 20px;
+    font-weight: 80px;
+    cursor: pointer;
+}
+
+#button4{
+    text-align: right; /* 오른쪽 정렬 */
+    margin-left: 65%;
+    margin-top: 156%;
+    width: 25%;
+    height: 4.5vh;
+    text-align: center;
+    background-color: red;
+    border: none;
+    color: white;
+    font-family: 'NanumSquareNeo-Variable';
+    font-size: 20px;
+    font-weight: 80px;
+    cursor: pointer;
+}
+
+.content .information{
+    margin-top: -150%;
+    color: white;
+    text-align: center;
+    line-height: 1.5; /* 줄 간격을 조정하여 여백을 추가 */
+}
+
+p span:nth-child(2){
+    color: skyblue;
+}
+
+p span:nth-child(3){
+    color: red;
+}
+
+.error{
+    width: 90%;
+    height: 6vh;
+    margin: 8% auto;
+    background-color: rgba(255, 255, 255);
+    text-align: center;
+    line-height: 3vh;
+}
+
+#selectinfo{
+    width: 100%;
+    height: 30vh;
+}
+
+#result{
+    height: 26vh;
+    width: 100%;
+    margin-top: 50%;
+}
+
+#button5{
+    text-align: right; /* 오른쪽 정렬 */
+    margin-left: 65%;
+    margin-top: 47%;
+    width: 25%;
+    height: 4.5vh;
+    text-align: center;
+    background-color: red;
+    border: none;
+    color: white;
+    font-family: 'NanumSquareNeo-Variable';
+    font-size: 20px;
+    font-weight: 80px;
+    cursor: pointer;
+}
+
+.moneybox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.moneybox1, .moneybox2 {
+    width: 40%;
+    height: 30vh;
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    display: flex;
+    justify-content: center; /* 텍스트 가로 중앙 정렬 */
+    align-items: center; /* 텍스트 세로 중앙 정렬 */
+}
+
+
+.moneybox1{
+    margin-right: 5%;
+}
+
+.none {
+    font-weight: bold;
+    color: orange; /* 주황색으로 변경 */
+    font-size: 25px;
+}
+
+.greenchange {
+    color: lightgreen; /* 초록색으로 변경 */
+}
+
+#button6{
+    text-align: right; /* 오른쪽 정렬 */
+    margin-left: 65%;
+    margin-top: -16%;
+    width: 25%;
+    height: 4.5vh;
+    text-align: center;
+    background-color: red;
+    border: none;
+    color: white;
+    font-family: 'NanumSquareNeo-Variable';
+    font-size: 20px;
+    font-weight: 80px;
+    cursor: pointer;
+}
+
+#many{
+    margin-top: 30%;
+    color: white;
+    text-align: center;
+}
+
+#manybox{
+    width: 40%;
+    height: 3vh;
+    background-color: black;
+    border: 2px solid white;
+    border-radius: 40px;
+    padding-top: 2%;
+    margin-top: -3%;
+    text-align: center;
+    margin-left: 29%;
+}
+
+.many h3{
+    font-size: 25px;
+}
+
+.many p{
+    color: orange;
+
+}
+
+#minikeypad{
+    margin-left: 8%;
+    width: 86%;
+    height: auto;
+}
+
+#button7{
+    text-align: right; /* 오른쪽 정렬 */
+    margin-left: 65%;
+    margin-top: 8%;
+    width: 25%;
+    height: 4.5vh;
+    text-align: center;
+    background-color: red;
+    border: none;
+    color: white;
+    font-family: 'NanumSquareNeo-Variable';
+    font-size: 20px;
+    font-weight: 80px;
+    cursor: pointer;
+}
+
+.paperbox {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    margin-top: 20%;
+}
+
+.paperbox1, .paperbox2 {
+    width: 40%;
+    height: 30vh;
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    display: flex;
+    justify-content: center; /* 텍스트 가로 중앙 정렬 */
+    align-items: center; /* 텍스트 세로 중앙 정렬 */
+}
+
+
+.paperbox1{
+    margin-right: 5%;
+}
+
+#mention{
+    color: white;
+    background-color: white;
+}
+
+
+.add{
+    color: white;
+}
+.add span{
+    color: lightgreen;
+}
+
+.noadd{
+    color: white;
+}
+.noadd span{
+    color: red;
+}
+
+.addornoadd{
+    margin-top: 10%;
+    text-align: center;
+}
+
+#button8{
+    text-align: right; /* 오른쪽 정렬 */
+    margin-left: 65%;
+    margin-top: 20%;
+    width: 25%;
+    height: 4.5vh;
+    text-align: center;
+    background-color: red;
+    border: none;
+    color: white;
+    font-family: 'NanumSquareNeo-Variable';
+    font-size: 20px;
+    font-weight: 80px;
+    cursor: pointer;
+}
+
+.pay{
+    color: white;
+    text-align: center;
+}
+
+.cardpay, .papermoneypay{
+    width: 80%;
+    height: 20vh;
+    background-color: black;
+    border: 6px double white;
+    border-radius: 10px;
+}
+
+.pay{
+    margin-top: 20%;
+    margin-left: 15%;
+}
+
+.pay .cardpay{
+    margin-bottom: 20%;
+}
+
+#button9{
+    text-align: right; /* 오른쪽 정렬 */
+    margin-left: 65%;
+    margin-top: 25%;
+    width: 25%;
+    height: 4.5vh;
+    text-align: center;
+    background-color: red;
+    border: none;
+    color: white;
+    font-family: 'NanumSquareNeo-Variable';
+    font-size: 20px;
+    font-weight: 80px;
+    cursor: pointer;
+}
